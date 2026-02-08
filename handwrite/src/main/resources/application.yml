@@ -1,0 +1,29 @@
+server:
+  port: 8001
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 100MB
+      file-size-threshold: 1MB
+      location: ${java.io.tmpdir}
+
+app:
+  temp-dir: ${java.io.tmpdir}/handwrite-temp
+  qwen:
+    server: http://192.168.111.86:11434/v1
+    model: qwen3-vl:8b-instruct
+    api-key: not-needed
+  contextgem:
+    server: http://192.168.111.86:11434/v1
+    model: qwen3-vl:8b-instruct
+    api-key: sk-155b32c6d3334255a3539a3839cc4d99
+  classify-server: https://llm.huzhou.gov.cn/servingpod/b50538bd4c0a44ddb94666e7b3e756c9/v1/chat/completions
+  classify-model: hzrs-Qwen3-VL-8B-Instruct
+
+logging:
+  level:
+    root: INFO
+    com.kinsware.file: DEBUG

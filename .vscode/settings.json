@@ -1,0 +1,5 @@
+{
+  "python.languageServer": "None",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic"
+}
